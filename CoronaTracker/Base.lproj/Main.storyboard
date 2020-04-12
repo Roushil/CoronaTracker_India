@@ -1,24 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="RLR-CA-hHV">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--CORONAVIRUS TRACKER-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="232" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CkE-JL-i87">
+                                <rect key="frame" x="0.0" y="88" width="414" height="808"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="B7D-IC-Lrm"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="wvV-bU-mDS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.15706828031770667" green="0.99790302902308814" blue="0.17877324383301985" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="CkE-JL-i87" secondAttribute="bottom" id="36V-n6-VQ1"/>
+                            <constraint firstItem="CkE-JL-i87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ffe-zJ-WGF"/>
+                            <constraint firstItem="CkE-JL-i87" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="J3Z-G2-l44"/>
+                            <constraint firstAttribute="trailing" secondItem="CkE-JL-i87" secondAttribute="trailing" id="QfG-Wx-jhy"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="CORONAVIRUS TRACKER" largeTitleDisplayMode="always" id="RFE-F5-AC8"/>
+                    <connections>
+                        <outlet property="coronaCasesTableView" destination="CkE-JL-i87" id="7cL-gH-n9v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="101.78571428571428"/>
+        </scene>
+        <!--State View Controller-->
+        <scene sceneID="SGW-uX-bPm">
+            <objects>
+                <viewController storyboardIdentifier="StateViewController" id="ZGg-p7-Ktc" customClass="StateViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Lah-gf-HOm">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="232" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-Ym-94P">
+                                <rect key="frame" x="0.0" y="44" width="414" height="852"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="ZGg-p7-Ktc" id="9sZ-XT-UwL"/>
+                                    <outlet property="delegate" destination="ZGg-p7-Ktc" id="6kb-Nr-x2q"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="rS3-Ym-94P" secondAttribute="bottom" id="5sB-V9-LCL"/>
+                            <constraint firstItem="rS3-Ym-94P" firstAttribute="leading" secondItem="Lah-gf-HOm" secondAttribute="leading" id="M8L-oE-T2G"/>
+                            <constraint firstItem="rS3-Ym-94P" firstAttribute="top" secondItem="NZf-nC-P8K" secondAttribute="top" id="Wfk-wM-bsd"/>
+                            <constraint firstAttribute="trailing" secondItem="rS3-Ym-94P" secondAttribute="trailing" id="pKA-GS-YRD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NZf-nC-P8K"/>
+                    </view>
+                    <connections>
+                        <outlet property="stateWiseTableView" destination="rS3-Ym-94P" id="f6a-YU-xpl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y8a-tZ-gMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1769.5652173913045" y="102.45535714285714"/>
+        </scene>
+        <!--State Map View Controller-->
+        <scene sceneID="rHH-Pv-FiQ">
+            <objects>
+                <viewController storyboardIdentifier="StateMapViewController" id="740-dO-tLx" customClass="StateMapViewController" customModule="CoronaTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Efc-T2-6Vl">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="T8L-f3-xfM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <connections>
+                                    <outlet property="delegate" destination="740-dO-tLx" id="PJO-Pr-sbt"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="ucf-I3-Hlq" firstAttribute="bottom" secondItem="T8L-f3-xfM" secondAttribute="bottom" id="DCs-rl-EaT"/>
+                            <constraint firstItem="T8L-f3-xfM" firstAttribute="top" secondItem="ucf-I3-Hlq" secondAttribute="top" id="oIo-Dh-89o"/>
+                            <constraint firstItem="ucf-I3-Hlq" firstAttribute="trailing" secondItem="T8L-f3-xfM" secondAttribute="trailing" id="vHW-t9-6Pm"/>
+                            <constraint firstItem="T8L-f3-xfM" firstAttribute="leading" secondItem="ucf-I3-Hlq" secondAttribute="leading" id="woT-7P-OHr"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ucf-I3-Hlq"/>
+                    </view>
+                    <connections>
+                        <outlet property="mapView" destination="T8L-f3-xfM" id="obJ-RZ-9rC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="suP-Du-YSq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2498" y="102"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qRT-YF-en7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="RLR-CA-hHV" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YTr-q4-3oq">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" red="0.1570682803" green="0.99790302900000005" blue="0.17877324380000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iEl-eR-PaN"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vKF-dw-Gg1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="400" y="102"/>
         </scene>
     </scenes>
 </document>

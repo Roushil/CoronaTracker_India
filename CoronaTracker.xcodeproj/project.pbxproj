@@ -13,6 +13,19 @@
 		2B5EE0EB244358A600AD7FFB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE0E9244358A600AD7FFB /* Main.storyboard */; };
 		2B5EE0ED244358AC00AD7FFB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE0EC244358AC00AD7FFB /* Assets.xcassets */; };
 		2B5EE0F0244358AC00AD7FFB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE0EE244358AC00AD7FFB /* LaunchScreen.storyboard */; };
+		2B5EE0F8244358E500AD7FFB /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE0F7244358E500AD7FFB /* Service.swift */; };
+		2B5EE10924435AA500AD7FFB /* DataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE10824435AA500AD7FFB /* DataViewModel.swift */; };
+		2B5EE10D2443601700AD7FFB /* CoronaDataCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE10B2443601700AD7FFB /* CoronaDataCell.swift */; };
+		2B5EE10E2443601700AD7FFB /* CoronaDataCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE10C2443601700AD7FFB /* CoronaDataCell.xib */; };
+		2B5EE1142443758100AD7FFB /* Statewise.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE10F2443758100AD7FFB /* Statewise.swift */; };
+		2B5EE1152443758100AD7FFB /* Total.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE1102443758100AD7FFB /* Total.swift */; };
+		2B5EE1162443758100AD7FFB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE1112443758100AD7FFB /* Data.swift */; };
+		2B5EE1172443758100AD7FFB /* Json4Swift_Base.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE1122443758100AD7FFB /* Json4Swift_Base.swift */; };
+		2B5EE1182443758100AD7FFB /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE1132443758100AD7FFB /* History.swift */; };
+		2B5EE11B24437FF900AD7FFB /* StateViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE11A24437FF900AD7FFB /* StateViewController.swift */; };
+		2B5EE11D2443A0D000AD7FFB /* StateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */; };
+		2B5EE1202443AD3600AD7FFB /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */; };
+		2B5EE1212443AD3600AD7FFB /* StateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE11F2443AD3600AD7FFB /* StateTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +37,19 @@
 		2B5EE0EC244358AC00AD7FFB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5EE0EF244358AC00AD7FFB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B5EE0F1244358AC00AD7FFB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B5EE0F7244358E500AD7FFB /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
+		2B5EE10824435AA500AD7FFB /* DataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataViewModel.swift; sourceTree = "<group>"; };
+		2B5EE10B2443601700AD7FFB /* CoronaDataCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoronaDataCell.swift; sourceTree = "<group>"; };
+		2B5EE10C2443601700AD7FFB /* CoronaDataCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoronaDataCell.xib; sourceTree = "<group>"; };
+		2B5EE10F2443758100AD7FFB /* Statewise.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Statewise.swift; sourceTree = "<group>"; };
+		2B5EE1102443758100AD7FFB /* Total.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Total.swift; sourceTree = "<group>"; };
+		2B5EE1112443758100AD7FFB /* Data.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
+		2B5EE1122443758100AD7FFB /* Json4Swift_Base.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Json4Swift_Base.swift; sourceTree = "<group>"; };
+		2B5EE1132443758100AD7FFB /* History.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		2B5EE11A24437FF900AD7FFB /* StateViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateViewController.swift; sourceTree = "<group>"; };
+		2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMapViewController.swift; sourceTree = "<group>"; };
+		2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
+		2B5EE11F2443AD3600AD7FFB /* StateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,13 +84,66 @@
 			children = (
 				2B5EE0E3244358A600AD7FFB /* AppDelegate.swift */,
 				2B5EE0E5244358A600AD7FFB /* SceneDelegate.swift */,
-				2B5EE0E7244358A600AD7FFB /* ViewController.swift */,
+				2B5EE0F9244358E800AD7FFB /* Service */,
+				2B5EE0FA2443592600AD7FFB /* Models */,
+				2B5EE10A24435FE300AD7FFB /* View */,
+				2B5EE10724435A8A00AD7FFB /* ViewModel */,
+				2B5EE11924437FE100AD7FFB /* ViewControllers */,
 				2B5EE0E9244358A600AD7FFB /* Main.storyboard */,
 				2B5EE0EC244358AC00AD7FFB /* Assets.xcassets */,
 				2B5EE0EE244358AC00AD7FFB /* LaunchScreen.storyboard */,
 				2B5EE0F1244358AC00AD7FFB /* Info.plist */,
 			);
 			path = CoronaTracker;
+			sourceTree = "<group>";
+		};
+		2B5EE0F9244358E800AD7FFB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EE0F7244358E500AD7FFB /* Service.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		2B5EE0FA2443592600AD7FFB /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EE1112443758100AD7FFB /* Data.swift */,
+				2B5EE1132443758100AD7FFB /* History.swift */,
+				2B5EE1122443758100AD7FFB /* Json4Swift_Base.swift */,
+				2B5EE10F2443758100AD7FFB /* Statewise.swift */,
+				2B5EE1102443758100AD7FFB /* Total.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		2B5EE10724435A8A00AD7FFB /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EE10824435AA500AD7FFB /* DataViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2B5EE10A24435FE300AD7FFB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EE10B2443601700AD7FFB /* CoronaDataCell.swift */,
+				2B5EE10C2443601700AD7FFB /* CoronaDataCell.xib */,
+				2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */,
+				2B5EE11F2443AD3600AD7FFB /* StateTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2B5EE11924437FE100AD7FFB /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				2B5EE0E7244358A600AD7FFB /* ViewController.swift */,
+				2B5EE11A24437FF900AD7FFB /* StateViewController.swift */,
+				2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,9 +204,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5EE1212443AD3600AD7FFB /* StateTableViewCell.xib in Resources */,
 				2B5EE0F0244358AC00AD7FFB /* LaunchScreen.storyboard in Resources */,
 				2B5EE0ED244358AC00AD7FFB /* Assets.xcassets in Resources */,
 				2B5EE0EB244358A600AD7FFB /* Main.storyboard in Resources */,
+				2B5EE10E2443601700AD7FFB /* CoronaDataCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,9 +219,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B5EE11B24437FF900AD7FFB /* StateViewController.swift in Sources */,
+				2B5EE11D2443A0D000AD7FFB /* StateMapViewController.swift in Sources */,
+				2B5EE1142443758100AD7FFB /* Statewise.swift in Sources */,
 				2B5EE0E8244358A600AD7FFB /* ViewController.swift in Sources */,
+				2B5EE1152443758100AD7FFB /* Total.swift in Sources */,
+				2B5EE1182443758100AD7FFB /* History.swift in Sources */,
+				2B5EE1172443758100AD7FFB /* Json4Swift_Base.swift in Sources */,
+				2B5EE10924435AA500AD7FFB /* DataViewModel.swift in Sources */,
+				2B5EE0F8244358E500AD7FFB /* Service.swift in Sources */,
 				2B5EE0E4244358A600AD7FFB /* AppDelegate.swift in Sources */,
 				2B5EE0E6244358A600AD7FFB /* SceneDelegate.swift in Sources */,
+				2B5EE1162443758100AD7FFB /* Data.swift in Sources */,
+				2B5EE10D2443601700AD7FFB /* CoronaDataCell.swift in Sources */,
+				2B5EE1202443AD3600AD7FFB /* StateTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
