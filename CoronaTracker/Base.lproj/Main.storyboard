@@ -117,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="VpY-Kx-cH8">
-                                <rect key="frame" x="10" y="139" width="394" height="236"/>
+                                <rect key="frame" x="10" y="134" width="394" height="236"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="3JC-fJ-p92">
                                         <rect key="frame" x="0.0" y="0.0" width="265.5" height="236"/>
@@ -204,18 +204,15 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-HC-q3t">
-                                <rect key="frame" x="0.0" y="49" width="414" height="60"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rz4-HC-q3t">
+                                <rect key="frame" x="0.0" y="49" width="414" height="55"/>
                                 <color key="backgroundColor" systemColor="systemGray4Color" red="0.81960784310000001" green="0.81960784310000001" blue="0.83921568629999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="asP-HO-hUI"/>
-                                </constraints>
                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="40"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YGn-I2-hbJ" customClass="PieChartView" customModule="CoronaTracker" customModuleProvider="target">
-                                <rect key="frame" x="32" y="425" width="350" height="350"/>
+                                <rect key="frame" x="32" y="410" width="350" height="350"/>
                                 <color key="backgroundColor" red="0.21176470589999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="VcH-XK-3es"/>
@@ -227,7 +224,7 @@
                         <constraints>
                             <constraint firstItem="rz4-HC-q3t" firstAttribute="leading" secondItem="Mus-HK-cP7" secondAttribute="leading" id="4CF-5O-8GH"/>
                             <constraint firstItem="VpY-Kx-cH8" firstAttribute="leading" secondItem="Mus-HK-cP7" secondAttribute="leading" constant="10" id="M71-Wh-vr9"/>
-                            <constraint firstItem="YGn-I2-hbJ" firstAttribute="top" secondItem="VpY-Kx-cH8" secondAttribute="bottom" constant="50" id="Rlv-xg-ivB"/>
+                            <constraint firstItem="YGn-I2-hbJ" firstAttribute="top" secondItem="VpY-Kx-cH8" secondAttribute="bottom" constant="40" id="Rlv-xg-ivB"/>
                             <constraint firstItem="Mus-HK-cP7" firstAttribute="trailing" secondItem="VpY-Kx-cH8" secondAttribute="trailing" constant="10" id="SNC-MB-zvD"/>
                             <constraint firstItem="rz4-HC-q3t" firstAttribute="trailing" secondItem="Mus-HK-cP7" secondAttribute="trailing" id="Zpe-nE-0wF"/>
                             <constraint firstItem="Mus-HK-cP7" firstAttribute="trailing" secondItem="YGn-I2-hbJ" secondAttribute="trailing" constant="32" id="jX8-8P-1Pa"/>
