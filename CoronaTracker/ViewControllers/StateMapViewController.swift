@@ -59,7 +59,6 @@ class StateMapViewController: UIViewController, FloatingPanelControllerDelegate 
             let span = MKCoordinateSpan(latitudeDelta: 2.0, longitudeDelta: 2.0)
             let region = MKCoordinateRegion(center: coordinate, span: span)
             self.mapView.setRegion(region, animated: true)
-            
         }
     }
 
