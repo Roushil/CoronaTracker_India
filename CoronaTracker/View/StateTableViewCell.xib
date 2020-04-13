@@ -3,6 +3,7 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -41,6 +42,7 @@
                     </stackView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-fJ-qOz">
                         <rect key="frame" x="371" y="25.5" width="30" height="30"/>
+                        <color key="tintColor" name="ArrowColor"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="30" id="Tux-Gk-ujY"/>
                             <constraint firstAttribute="height" constant="30" id="yoC-bj-420"/>
@@ -65,5 +67,8 @@
     </objects>
     <resources>
         <image name="Arrow" width="16.5" height="16.5"/>
+        <namedColor name="ArrowColor">
+            <color red="0.21176470589999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
     </resources>
 </document>
