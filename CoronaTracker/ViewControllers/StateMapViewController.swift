@@ -8,12 +8,13 @@
 
 import UIKit
 import MapKit
+import FloatingPanel
 
-class StateMapViewController: UIViewController {
+class StateMapViewController: UIViewController, FloatingPanelControllerDelegate {
     
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
-    
+    var fpc: FloatingPanelController!
     var state: Statewise!{
         didSet{
             showLocation(locationName: state?.state)
@@ -22,7 +23,16 @@ class StateMapViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        DispatchQueue.main.async{
+            self.showFloatingScreen()
+        }
+        
+        func viewWillDisappear(_ animated: Bool) {
+            super.viewWillDisappear(animated)
+            fpc.removePanelFromParent(animated: true)
+        }
     }
     
     func showLocation(locationName: String?){
@@ -41,7 +51,7 @@ class StateMapViewController: UIViewController {
             
             let annotation = MKPointAnnotation()
             annotation.title = locationName
-            annotation.subtitle = "Total Deaths:\(self.state?.confirmed ?? 0)"
+            annotation.subtitle = "TOTAL CASES:\(self.state?.confirmed ?? 0)"
             annotation.coordinate = CLLocationCoordinate2DMake(latitude, longitude)
             self.mapView.addAnnotation(annotation)
             
@@ -50,15 +60,16 @@ class StateMapViewController: UIViewController {
             let region = MKCoordinateRegion(center: coordinate, span: span)
             self.mapView.setRegion(region, animated: true)
             
-            self.callAlert(confirmed: "\(self.state.confirmed!)", active: "\(self.state.active!)", deaths: "\(self.state.deaths!)", recovered: "\(self.state.recovered!)")
         }
     }
-    
-    func callAlert(confirmed: String, active: String, deaths: String, recovered: String){
+
+    func showFloatingScreen(){
         
-        let alert = UIAlertController(title: "\(state.state ?? "")", message: "Total: \(confirmed) \n Active: \(active) \n Recovered: \(recovered) \n Deaths: \(deaths)", preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-        alert.addAction(action)
-        self.present(alert, animated: true)
+        fpc = FloatingPanelController()
+        fpc.delegate = self
+        let graphVC = self.storyboard?.instantiateViewController(identifier: "GraphViewController") as! GraphViewController
+        graphVC.state = self.state
+        fpc.set(contentViewController: graphVC)
+        fpc.addPanel(toParent: self)
     }
 }

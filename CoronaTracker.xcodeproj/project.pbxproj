@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -26,6 +26,10 @@
 		2B5EE11D2443A0D000AD7FFB /* StateMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */; };
 		2B5EE1202443AD3600AD7FFB /* StateTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */; };
 		2B5EE1212443AD3600AD7FFB /* StateTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B5EE11F2443AD3600AD7FFB /* StateTableViewCell.xib */; };
+		2B6523B924447E5600E1FABA /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6523B824447E5600E1FABA /* GraphViewController.swift */; };
+		2B6523BF2444870200E1FABA /* PieChartView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6523BC2444870100E1FABA /* PieChartView.xib */; };
+		2B6523C02444870200E1FABA /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6523BD2444870100E1FABA /* PieChartView.swift */; };
+		C079F5AD2DE82DAAB7B48629 /* Pods_CoronaTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5D8E79AAC47B3032B8242489 /* Pods_CoronaTracker.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,12 @@
 		2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateMapViewController.swift; sourceTree = "<group>"; };
 		2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateTableViewCell.swift; sourceTree = "<group>"; };
 		2B5EE11F2443AD3600AD7FFB /* StateTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StateTableViewCell.xib; sourceTree = "<group>"; };
+		2B6523B824447E5600E1FABA /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
+		2B6523BC2444870100E1FABA /* PieChartView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieChartView.xib; sourceTree = "<group>"; };
+		2B6523BD2444870100E1FABA /* PieChartView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		5D8E79AAC47B3032B8242489 /* Pods_CoronaTracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CoronaTracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E95C8858F32BFE73CFE80FEC /* Pods-CoronaTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTracker.release.xcconfig"; path = "Target Support Files/Pods-CoronaTracker/Pods-CoronaTracker.release.xcconfig"; sourceTree = "<group>"; };
+		EBFD95566BCF7ECBA2E55596 /* Pods-CoronaTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CoronaTracker.debug.xcconfig"; path = "Target Support Files/Pods-CoronaTracker/Pods-CoronaTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C079F5AD2DE82DAAB7B48629 /* Pods_CoronaTracker.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +79,8 @@
 			children = (
 				2B5EE0E2244358A600AD7FFB /* CoronaTracker */,
 				2B5EE0E1244358A600AD7FFB /* Products */,
+				CA446B71420C111061F6AAF7 /* Pods */,
+				3CB5DDCFA038DD72770E35AF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -128,6 +141,7 @@
 		2B5EE10A24435FE300AD7FFB /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2B6523BA244486E000E1FABA /* GraphView */,
 				2B5EE10B2443601700AD7FFB /* CoronaDataCell.swift */,
 				2B5EE10C2443601700AD7FFB /* CoronaDataCell.xib */,
 				2B5EE11E2443AD3600AD7FFB /* StateTableViewCell.swift */,
@@ -142,8 +156,35 @@
 				2B5EE0E7244358A600AD7FFB /* ViewController.swift */,
 				2B5EE11A24437FF900AD7FFB /* StateViewController.swift */,
 				2B5EE11C2443A0D000AD7FFB /* StateMapViewController.swift */,
+				2B6523B824447E5600E1FABA /* GraphViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		2B6523BA244486E000E1FABA /* GraphView */ = {
+			isa = PBXGroup;
+			children = (
+				2B6523BD2444870100E1FABA /* PieChartView.swift */,
+				2B6523BC2444870100E1FABA /* PieChartView.xib */,
+			);
+			path = GraphView;
+			sourceTree = "<group>";
+		};
+		3CB5DDCFA038DD72770E35AF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5D8E79AAC47B3032B8242489 /* Pods_CoronaTracker.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CA446B71420C111061F6AAF7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EBFD95566BCF7ECBA2E55596 /* Pods-CoronaTracker.debug.xcconfig */,
+				E95C8858F32BFE73CFE80FEC /* Pods-CoronaTracker.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,9 +194,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B5EE0F4244358AC00AD7FFB /* Build configuration list for PBXNativeTarget "CoronaTracker" */;
 			buildPhases = (
+				83F5DB646A93F7B5EDD5BCB8 /* [CP] Check Pods Manifest.lock */,
 				2B5EE0DC244358A600AD7FFB /* Sources */,
 				2B5EE0DD244358A600AD7FFB /* Frameworks */,
 				2B5EE0DE244358A600AD7FFB /* Resources */,
+				C0317B4B552153C0C8BDB235 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -206,6 +249,7 @@
 			files = (
 				2B5EE1212443AD3600AD7FFB /* StateTableViewCell.xib in Resources */,
 				2B5EE0F0244358AC00AD7FFB /* LaunchScreen.storyboard in Resources */,
+				2B6523BF2444870200E1FABA /* PieChartView.xib in Resources */,
 				2B5EE0ED244358AC00AD7FFB /* Assets.xcassets in Resources */,
 				2B5EE0EB244358A600AD7FFB /* Main.storyboard in Resources */,
 				2B5EE10E2443601700AD7FFB /* CoronaDataCell.xib in Resources */,
@@ -213,6 +257,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		83F5DB646A93F7B5EDD5BCB8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CoronaTracker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C0317B4B552153C0C8BDB235 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronaTracker/Pods-CoronaTracker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CoronaTracker/Pods-CoronaTracker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CoronaTracker/Pods-CoronaTracker-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B5EE0DC244358A600AD7FFB /* Sources */ = {
@@ -225,12 +311,14 @@
 				2B5EE0E8244358A600AD7FFB /* ViewController.swift in Sources */,
 				2B5EE1152443758100AD7FFB /* Total.swift in Sources */,
 				2B5EE1182443758100AD7FFB /* History.swift in Sources */,
+				2B6523B924447E5600E1FABA /* GraphViewController.swift in Sources */,
 				2B5EE1172443758100AD7FFB /* Json4Swift_Base.swift in Sources */,
 				2B5EE10924435AA500AD7FFB /* DataViewModel.swift in Sources */,
 				2B5EE0F8244358E500AD7FFB /* Service.swift in Sources */,
 				2B5EE0E4244358A600AD7FFB /* AppDelegate.swift in Sources */,
 				2B5EE0E6244358A600AD7FFB /* SceneDelegate.swift in Sources */,
 				2B5EE1162443758100AD7FFB /* Data.swift in Sources */,
+				2B6523C02444870200E1FABA /* PieChartView.swift in Sources */,
 				2B5EE10D2443601700AD7FFB /* CoronaDataCell.swift in Sources */,
 				2B5EE1202443AD3600AD7FFB /* StateTableViewCell.swift in Sources */,
 			);
@@ -374,6 +462,7 @@
 		};
 		2B5EE0F5244358AC00AD7FFB /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EBFD95566BCF7ECBA2E55596 /* Pods-CoronaTracker.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -392,6 +481,7 @@
 		};
 		2B5EE0F6244358AC00AD7FFB /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E95C8858F32BFE73CFE80FEC /* Pods-CoronaTracker.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
