@@ -12,7 +12,7 @@ import UIKit
 class Service: NSObject{
     class func getJSONData(completion: @escaping (_ gotData: Bool) -> ()){
         
-        guard let url = URL(string: "https://api.rootnet.in/covid19-in/unofficial/covid19india.org/statewise/history") else { return }
+        guard let url = URL(string: "https://....") else { return }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
             
             guard let coronaInfo = data else { return }
