@@ -15,7 +15,7 @@ class StateMapViewController: UIViewController, FloatingPanelControllerDelegate 
     @IBOutlet weak var mapView: MKMapView!
     var locationManager = CLLocationManager()
     var fpc: FloatingPanelController!
-    var state: Statewise!{
+    var state: State!{
         didSet{
             showLocation(locationName: state?.state)
         }

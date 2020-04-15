@@ -13,5 +13,5 @@ class DataViewModel: NSObject{
     
     static var shared = DataViewModel()
     
-    var history: [History]?
+    var history: [CaseHistory]?
 }

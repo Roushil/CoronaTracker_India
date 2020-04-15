@@ -13,12 +13,21 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 
 import Foundation
 
+
+protocol State{
+    var state : String? { get set }
+    var confirmed : Int? { get set }
+    var recovered : Int? { get set }
+    var deaths : Int? { get set }
+    var active : Int? { get set }
+}
+
 struct Statewise : Codable {
-	let state : String?
-	let confirmed : Int?
-	let recovered : Int?
-	let deaths : Int?
-	let active : Int?
+	var state : String?
+	var confirmed : Int?
+	var recovered : Int?
+	var deaths : Int?
+	var active : Int?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -39,3 +48,6 @@ struct Statewise : Codable {
 	}
 
 }
+
+extension Statewise: State { }
+

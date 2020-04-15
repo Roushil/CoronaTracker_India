@@ -10,7 +10,7 @@ import UIKit
 
 class GraphViewController: UIViewController {
 
-    var state: Statewise?{
+    var state: State?{
         didSet{
             setValuesAndPercentage(state: state)
         }
@@ -51,7 +51,7 @@ class GraphViewController: UIViewController {
             ]
     }
     
-    func setValuesAndPercentage(state: Statewise?){
+    func setValuesAndPercentage(state: State?){
         
         guard let affectedState = state else { return }
         name = affectedState.state

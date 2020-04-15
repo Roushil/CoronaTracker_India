@@ -11,7 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var coronaCasesTableView: UITableView!
-    var coronaCases: [History]?
+    var coronaCases: [CaseHistory]?
     
     override func viewDidLoad() {
         super.viewDidLoad()

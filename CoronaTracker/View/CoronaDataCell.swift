@@ -21,7 +21,7 @@ class CoronaDataCell: UITableViewCell {
     }
     
     
-    func configureTotalCases(cases: History){
+    func configureTotalCases(cases: CaseHistory){
         
         self.dayCases.text = getDate(caseDate: cases.day!)
         self.totalCases.text = "Confirmed:\t\t\(cases.total?.confirmed ?? 0)"

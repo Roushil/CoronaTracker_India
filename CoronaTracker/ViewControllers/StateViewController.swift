@@ -12,7 +12,7 @@ class StateViewController: UIViewController {
 
     @IBOutlet weak var stateWiseTableView: UITableView!
     
-    var states: [Statewise]?
+    var states: [State]?
     
     var date: String?{
         didSet{

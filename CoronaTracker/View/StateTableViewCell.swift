@@ -18,7 +18,7 @@ class StateTableViewCell: UITableViewCell {
         
     }
 
-    func configureStateCases(state: Statewise){
+    func configureStateCases(state: State){
         self.stateName.text = state.state
         self.totalCases.text = "Confirmed:\t\t\(state.confirmed ?? 0)"
     }

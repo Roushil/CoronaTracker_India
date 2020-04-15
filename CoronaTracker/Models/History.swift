@@ -12,10 +12,18 @@ For support, please feel free to contact me at https://www.linkedin.com/in/syeda
 */
 
 import Foundation
+
+protocol CaseHistory{
+    
+    var day : String? { get set }
+    var total : Total? { get set }
+    var statewise : [Statewise]? { get set }
+}
+
 struct History : Codable {
-	let day : String?
-	let total : Total?
-	let statewise : [Statewise]?
+	var day : String?
+	var total : Total?
+	var statewise : [Statewise]?
 
 	enum CodingKeys: String, CodingKey {
 
@@ -30,5 +38,6 @@ struct History : Codable {
 		total = try values.decodeIfPresent(Total.self, forKey: .total)
 		statewise = try values.decodeIfPresent([Statewise].self, forKey: .statewise)
 	}
-
 }
+
+extension History: CaseHistory{ }
