@@ -46,8 +46,7 @@ class StateMapViewController: UIViewController, FloatingPanelControllerDelegate 
                 print(error.localizedDescription)
             }
             
-            let latitude = response!.boundingRegion.center.latitude
-            let longitude = response!.boundingRegion.center.longitude
+            guard let latitude = response?.boundingRegion.center.latitude, let longitude = response?.boundingRegion.center.longitude else { return }
             
             let annotation = MKPointAnnotation()
             annotation.title = locationName
