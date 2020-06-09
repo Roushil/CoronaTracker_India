@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16086"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,51 +10,70 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="KGk-i7-Jjw" customClass="StateTableViewCell" customModule="CoronaTracker" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="411" height="81"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="129" id="KGk-i7-Jjw" customClass="StateTableViewCell" customModule="CoronaTracker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="130"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="411" height="81"/>
+                <rect key="frame" x="0.0" y="0.0" width="415" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-yk-lSf">
-                        <rect key="frame" x="0.0" y="0.0" width="361" height="76"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M9Q-q4-2it">
+                        <rect key="frame" x="10" y="5" width="395" height="120"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPD-IO-I6Z">
-                                <rect key="frame" x="0.0" y="0.0" width="361" height="36"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Qll-yk-lSf">
+                                <rect key="frame" x="5" y="5" width="345" height="110"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPD-IO-I6Z">
+                                        <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
+                                        <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Total Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-Vg-ZAL">
+                                        <rect key="frame" x="0.0" y="46" width="345" height="64"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                        <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="GJh-Uh-euW"/>
+                                    <constraint firstItem="IhP-Vg-ZAL" firstAttribute="leading" secondItem="Qll-yk-lSf" secondAttribute="leading" id="I3m-AQ-3TL"/>
+                                    <constraint firstAttribute="trailing" secondItem="BPD-IO-I6Z" secondAttribute="trailing" id="ULR-s4-e3M"/>
+                                    <constraint firstItem="BPD-IO-I6Z" firstAttribute="leading" secondItem="Qll-yk-lSf" secondAttribute="leading" id="do1-J3-9bg"/>
+                                    <constraint firstAttribute="trailing" secondItem="IhP-Vg-ZAL" secondAttribute="trailing" id="gTu-dC-v3A"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-Vg-ZAL">
-                                <rect key="frame" x="0.0" y="46" width="361" height="30"/>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-fJ-qOz">
+                                <rect key="frame" x="360" y="45" width="30" height="30"/>
+                                <color key="tintColor" name="ArrowColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="aRz-k6-mq1"/>
+                                    <constraint firstAttribute="width" constant="30" id="S5m-uD-rsl"/>
+                                    <constraint firstAttribute="height" constant="30" id="WEM-Sg-fUb"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </imageView>
                         </subviews>
-                    </stackView>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Arrow" translatesAutoresizingMaskIntoConstraints="NO" id="ZO2-fJ-qOz">
-                        <rect key="frame" x="371" y="25.5" width="30" height="30"/>
-                        <color key="tintColor" name="ArrowColor"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="Tux-Gk-ujY"/>
-                            <constraint firstAttribute="height" constant="30" id="yoC-bj-420"/>
+                            <constraint firstItem="ZO2-fJ-qOz" firstAttribute="centerY" secondItem="M9Q-q4-2it" secondAttribute="centerY" id="Pbl-F5-iy1"/>
+                            <constraint firstItem="Qll-yk-lSf" firstAttribute="top" secondItem="M9Q-q4-2it" secondAttribute="top" constant="5" id="THf-9V-I2b"/>
+                            <constraint firstAttribute="trailing" secondItem="ZO2-fJ-qOz" secondAttribute="trailing" constant="5" id="bGo-h3-tnG"/>
+                            <constraint firstItem="Qll-yk-lSf" firstAttribute="leading" secondItem="M9Q-q4-2it" secondAttribute="leading" constant="5" id="jMb-H7-bMB"/>
+                            <constraint firstItem="ZO2-fJ-qOz" firstAttribute="leading" secondItem="Qll-yk-lSf" secondAttribute="trailing" constant="10" id="lut-Sp-8sn"/>
+                            <constraint firstAttribute="bottom" secondItem="Qll-yk-lSf" secondAttribute="bottom" constant="5" id="mzI-rQ-kAr"/>
                         </constraints>
-                    </imageView>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                <integer key="value" value="25"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
                 </subviews>
+                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Qll-yk-lSf" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="4Vf-0a-cUp"/>
-                    <constraint firstItem="Qll-yk-lSf" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NLp-dR-P2V"/>
-                    <constraint firstAttribute="trailing" secondItem="ZO2-fJ-qOz" secondAttribute="trailing" constant="10" id="e3N-Co-0cx"/>
-                    <constraint firstItem="ZO2-fJ-qOz" firstAttribute="leading" secondItem="Qll-yk-lSf" secondAttribute="trailing" constant="10" id="lnJ-jZ-bRm"/>
-                    <constraint firstItem="ZO2-fJ-qOz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="tsh-Dm-XIo"/>
+                    <constraint firstAttribute="trailing" secondItem="M9Q-q4-2it" secondAttribute="trailing" constant="10" id="0Ub-28-XTw"/>
+                    <constraint firstItem="M9Q-q4-2it" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="13h-zR-9vT"/>
+                    <constraint firstItem="M9Q-q4-2it" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Ti9-Pd-qfB"/>
+                    <constraint firstAttribute="bottom" secondItem="M9Q-q4-2it" secondAttribute="bottom" constant="5" id="ws4-ic-8cd"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
@@ -62,13 +81,13 @@
                 <outlet property="stateName" destination="BPD-IO-I6Z" id="Y9n-lH-8Bz"/>
                 <outlet property="totalCases" destination="IhP-Vg-ZAL" id="oGP-SG-LLA"/>
             </connections>
-            <point key="canvasLocation" x="109.42028985507247" y="92.745535714285708"/>
+            <point key="canvasLocation" x="112.31884057971016" y="95.758928571428569"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="Arrow" width="16.5" height="16.5"/>
         <namedColor name="ArrowColor">
-            <color red="0.21176470589999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.21199999749660492" green="0.21600000560283661" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>

@@ -31,6 +31,7 @@ class StateViewController: UIViewController {
 
 extension StateViewController: UITableViewDataSource, UITableViewDelegate{
     
+
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return states?.count ?? 0
     }
@@ -38,6 +39,7 @@ extension StateViewController: UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = stateWiseTableView.dequeueReusableCell(withIdentifier: "StateTableViewCell", for: indexPath) as! StateTableViewCell
+        cell.contentView.layer.cornerRadius = 25
         let state = states![indexPath.row]
         cell.configureStateCases(state: state)
         return cell
@@ -52,6 +54,17 @@ extension StateViewController: UITableViewDataSource, UITableViewDelegate{
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        return UITableView.automaticDimension
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let view = UIView()
+        view.backgroundColor = .white
+        return view
+    }
+
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 10
+    }
+    
 }
