@@ -19,14 +19,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="232" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CkE-JL-i87">
                                 <rect key="frame" x="0.0" y="140" width="414" height="756"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" name="BgColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="B7D-IC-Lrm"/>
                                     <outlet property="delegate" destination="BYZ-38-t0r" id="wvV-bU-mDS"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="CkE-JL-i87" secondAttribute="bottom" constant="-34" id="36V-n6-VQ1"/>
                             <constraint firstItem="CkE-JL-i87" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Ffe-zJ-WGF"/>
@@ -35,7 +35,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" title="CORONA CASES" largeTitleDisplayMode="always" id="RFE-F5-AC8"/>
+                    <navigationItem key="navigationItem" title="CORONA CASES" id="RFE-F5-AC8"/>
                     <connections>
                         <outlet property="coronaCasesTableView" destination="CkE-JL-i87" id="7cL-gH-n9v"/>
                     </connections>
@@ -55,14 +55,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="232" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rS3-Ym-94P">
                                 <rect key="frame" x="0.0" y="44" width="414" height="852"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" name="BgColor"/>
                                 <connections>
                                     <outlet property="dataSource" destination="ZGg-p7-Ktc" id="9sZ-XT-UwL"/>
                                     <outlet property="delegate" destination="ZGg-p7-Ktc" id="6kb-Nr-x2q"/>
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" name="BgColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="rS3-Ym-94P" secondAttribute="bottom" id="5sB-V9-LCL"/>
                             <constraint firstItem="rS3-Ym-94P" firstAttribute="leading" secondItem="Lah-gf-HOm" secondAttribute="leading" id="M8L-oE-T2G"/>
@@ -71,7 +71,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="NZf-nC-P8K"/>
                     </view>
-                    <navigationItem key="navigationItem" id="CjO-Pt-X3x"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="CjO-Pt-X3x"/>
                     <connections>
                         <outlet property="stateWiseTableView" destination="rS3-Ym-94P" id="f6a-YU-xpl"/>
                     </connections>
@@ -104,7 +104,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="ucf-I3-Hlq"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Oa0-fO-5sL"/>
+                    <navigationItem key="navigationItem" id="Oa0-fO-5sL">
+                        <barButtonItem key="backBarButtonItem" title=" " id="BeO-BF-Sco"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="mapView" destination="T8L-f3-xfM" id="obJ-RZ-9rC"/>
                     </connections>
@@ -224,6 +226,20 @@
                                     <constraint firstAttribute="height" constant="350" id="tsF-gx-ENe"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FMK-wu-9an">
+                                <rect key="frame" x="41.333333333333343" y="419.66666666666669" width="331.33333333333326" height="50"/>
+                                <color key="backgroundColor" name="ButtonColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XF3-3K-5DG"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
+                                <state key="normal" title="Display Chart">
+                                    <color key="titleColor" name="TitleColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="displayChartTapped:" destination="ov7-Ei-cHK" eventType="touchUpInside" id="EVd-Zo-H5g"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.21176470589999999" green="0.2156862745" blue="0.26274509800000001" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                         <constraints>
@@ -231,7 +247,10 @@
                             <constraint firstItem="VpY-Kx-cH8" firstAttribute="leading" secondItem="Mus-HK-cP7" secondAttribute="leading" constant="10" id="M71-Wh-vr9"/>
                             <constraint firstItem="YGn-I2-hbJ" firstAttribute="top" secondItem="VpY-Kx-cH8" secondAttribute="bottom" constant="40" id="Rlv-xg-ivB"/>
                             <constraint firstItem="Mus-HK-cP7" firstAttribute="trailing" secondItem="VpY-Kx-cH8" secondAttribute="trailing" constant="10" id="SNC-MB-zvD"/>
+                            <constraint firstItem="FMK-wu-9an" firstAttribute="centerX" secondItem="vzi-vo-Hcq" secondAttribute="centerX" id="Tim-zj-PCj"/>
+                            <constraint firstItem="FMK-wu-9an" firstAttribute="top" secondItem="VpY-Kx-cH8" secondAttribute="bottom" constant="50" id="YVc-3f-FO4"/>
                             <constraint firstItem="rz4-HC-q3t" firstAttribute="trailing" secondItem="Mus-HK-cP7" secondAttribute="trailing" id="Zpe-nE-0wF"/>
+                            <constraint firstItem="FMK-wu-9an" firstAttribute="width" secondItem="Mus-HK-cP7" secondAttribute="width" multiplier="0.8" id="h0y-H0-TqO"/>
                             <constraint firstItem="Mus-HK-cP7" firstAttribute="trailing" secondItem="YGn-I2-hbJ" secondAttribute="trailing" constant="32" id="jX8-8P-1Pa"/>
                             <constraint firstItem="YGn-I2-hbJ" firstAttribute="leading" secondItem="Mus-HK-cP7" secondAttribute="leading" constant="32" id="pZG-vw-aGr"/>
                             <constraint firstItem="VpY-Kx-cH8" firstAttribute="top" secondItem="rz4-HC-q3t" secondAttribute="bottom" constant="30" id="rLJ-2w-rqQ"/>
@@ -242,6 +261,7 @@
                     <connections>
                         <outlet property="activeCases" destination="cYa-l2-XEO" id="e4H-ad-Suu"/>
                         <outlet property="deathCases" destination="B48-NF-XnC" id="JcW-14-KRl"/>
+                        <outlet property="displayChartButton" destination="FMK-wu-9an" id="k3F-y9-1kt"/>
                         <outlet property="pieChartView" destination="YGn-I2-hbJ" id="JOd-9f-u8M"/>
                         <outlet property="recoveredCases" destination="8EX-Gp-6wx" id="65h-mD-FgL"/>
                         <outlet property="stateName" destination="rz4-HC-q3t" id="WEt-bL-skd"/>
@@ -260,7 +280,13 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" largeTitles="YES" id="YTr-q4-3oq">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="BgColor"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" name="TitleColor"/>
+                        </textAttributes>
+                        <textAttributes key="largeTitleTextAttributes">
+                            <color key="textColor" name="TitleColor"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -273,8 +299,17 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="BgColor">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="ButtonColor">
+            <color red="0.1960784314" green="0.79215686269999996" blue="0.47058823529999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="StateColor">
             <color red="0.83700001239776611" green="0.83700001239776611" blue="0.83700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TitleColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

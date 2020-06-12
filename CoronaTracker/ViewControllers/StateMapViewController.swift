@@ -24,6 +24,7 @@ class StateMapViewController: UIViewController, FloatingPanelControllerDelegate 
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationController?.navigationBar.prefersLargeTitles = false
         locationManager.desiredAccuracy = kCLLocationAccuracyBest
         DispatchQueue.main.async{
             self.showFloatingScreen()

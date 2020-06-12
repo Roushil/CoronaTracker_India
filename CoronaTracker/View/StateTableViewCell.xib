@@ -26,7 +26,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPD-IO-I6Z">
                                         <rect key="frame" x="0.0" y="0.0" width="345" height="36"/>
                                         <fontDescription key="fontDescription" name="Avenir-Medium" family="Avenir" pointSize="26"/>
-                                        <nil key="textColor"/>
+                                        <color key="textColor" name="ArrowColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalCompressionResistancePriority="749" verticalCompressionResistancePriority="749" text="Total Cases" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IhP-Vg-ZAL">
@@ -52,7 +52,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" name="StateColor"/>
                         <constraints>
                             <constraint firstItem="ZO2-fJ-qOz" firstAttribute="centerY" secondItem="M9Q-q4-2it" secondAttribute="centerY" id="Pbl-F5-iy1"/>
                             <constraint firstItem="Qll-yk-lSf" firstAttribute="top" secondItem="M9Q-q4-2it" secondAttribute="top" constant="5" id="THf-9V-I2b"/>
@@ -68,7 +68,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                 </subviews>
-                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <color key="backgroundColor" name="BgColor"/>
                 <constraints>
                     <constraint firstAttribute="trailing" secondItem="M9Q-q4-2it" secondAttribute="trailing" constant="10" id="0Ub-28-XTw"/>
                     <constraint firstItem="M9Q-q4-2it" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="13h-zR-9vT"/>
@@ -88,6 +88,12 @@
         <image name="Arrow" width="16.5" height="16.5"/>
         <namedColor name="ArrowColor">
             <color red="0.21199999749660492" green="0.21600000560283661" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="BgColor">
+            <color red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="StateColor">
+            <color red="0.83700001239776611" green="0.83700001239776611" blue="0.83700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>

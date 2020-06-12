@@ -22,6 +22,9 @@ class GraphViewController: UIViewController {
     @IBOutlet weak var recoveredCases: UILabel!
     @IBOutlet weak var deathCases: UILabel!
     @IBOutlet weak var pieChartView: PieChartView!
+    
+    @IBOutlet weak var displayChartButton: UIButton!
+    
     var name: String?
     var total: Int?
     var active: Int?
@@ -38,11 +41,22 @@ class GraphViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        pieChartView.animateChart()
+        displayChartButton.layer.cornerRadius = 20
+    }
+    
+    @IBAction func displayChartTapped(_ sender: UIButton) {
+        
+        UIView.animate(withDuration: 0.5, animations: {
+            self.pieChartView.alpha = 1
+            self.displayChartButton.alpha = 0
+        }) { [unowned self] (finished) in
+            self.pieChartView.animateChart()
+        }
     }
     
     func setPieChart(){
 
+        pieChartView.alpha = 0
         guard let active = activePercentage, let recover = recPercentage, let death = deathPercentage else { return }
         pieChartView.slices = [
             Slice(percent: CGFloat(active), color: UIColor.yellow),
