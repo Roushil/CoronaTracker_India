@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
@@ -16,24 +16,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CoronaLogo" translatesAutoresizingMaskIntoConstraints="NO" id="ZD7-Oh-IwV">
-                                <rect key="frame" x="0.0" y="277.5" width="414" height="341"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="ZD7-Oh-IwV">
+                                <rect key="frame" x="27.666666666666657" y="268.66666666666663" width="358.66666666666674" height="358.66666666666663"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZD7-Oh-IwV" secondAttribute="height" multiplier="1:1" id="1C6-At-9Fh"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORONA TRACKER" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnf-ks-Cu7">
-                                <rect key="frame" x="0.0" y="708.5" width="414" height="44"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CORONA TRACKER" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wnf-ks-Cu7">
+                                <rect key="frame" x="0.0" y="677.33333333333337" width="414" height="44"/>
                                 <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="38"/>
-                                <color key="textColor" name="ArrowColor"/>
+                                <color key="textColor" name="StateColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.74509803919999995" green="0.87450980389999999" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="gfh-pu-OpZ"/>
-                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="hpu-ez-MW1"/>
-                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="oR0-ON-a7N"/>
-                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wTW-kp-Zsu"/>
-                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zLR-UR-srG"/>
-                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="top" secondItem="ZD7-Oh-IwV" secondAttribute="bottom" constant="90" id="zM3-5u-hBc"/>
+                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="top" secondItem="ZD7-Oh-IwV" secondAttribute="bottom" constant="50" id="AFu-Jy-IIb"/>
+                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ATA-jl-AxO"/>
+                            <constraint firstItem="Wnf-ks-Cu7" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Hgj-yf-dxo"/>
+                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="P5E-iV-Ksp"/>
+                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="VAO-54-Kvg"/>
+                            <constraint firstItem="ZD7-Oh-IwV" firstAttribute="height" secondItem="Ze5-6b-2t3" secondAttribute="height" multiplier="0.4" id="qf3-8z-F7P"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -44,9 +47,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="CoronaLogo" width="341" height="341"/>
-        <namedColor name="ArrowColor">
-            <color red="0.21199999749660492" green="0.21600000560283661" blue="0.2630000114440918" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        <image name="Logo" width="341.33334350585938" height="341.33334350585938"/>
+        <namedColor name="StateColor">
+            <color red="0.83700001239776611" green="0.83700001239776611" blue="0.83700001239776611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
 </document>
